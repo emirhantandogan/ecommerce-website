@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light px-3 d-flex justify-content-between align-items-center position-relative">
+        <a class="navbar-brand" href="products.html">
+            <img src="images/logo.png" alt="Logo" width="200" height="75">
+        </a>
+    
+        <h2 id="page-title" class="position-absolute start-50 translate-middle-x m-0">Product Details</h2>
+    
+        <a href="shopping-cart.html" class="position-relative">
+            <img src="images/cart.png" alt="Cart" width="40">
+            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                0
+            </span>
+        </a>
+    </header>
+
+    <div class="container mt-4">
+        <div id="product-detail" class="row">
+            <div class="col-md-6">
+                <div id="product-image-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carousel-images">
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#product-image-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#product-image-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 id="product-title"></h3>
+                <p id="product-description"></p>
+                <p><strong>Price: $<span id="product-price"></span></strong></p>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" class="form-control mb-2" min="1" value="1">
+
+                <p><strong>Total: $<span id="total-price"></span></strong></p>
+
+                <button id="add-to-cart" class="custom-btn custom-btn-accept">Add to Cart</button>
+                <button id="go-to-cart" class="custom-btn">Go to Cart</button>
+                <button id="continue-shopping" class="custom-btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="header.js"></script>
+    <script src="products.js"></script>
+    <script src="product-detail.js"></script>
+
+</body>
+</html>
